@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh; /* Ensures body takes full viewport height */
+        width: 100vw; /* Ensures body takes full viewport width */
+        margin: 0; /* Removes default margin */
+        background-size: cover;
+      }
+      img {
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+      }
+
+      .nav-bar {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 25px;
+      }
+      a:hover {
+        color: blue;
+      }
+
+      .container {
+        width: 100%;
+        height: 100vh;
+        background-image: url('./tanjiro.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      form {
+        background: rgba(209, 42, 42, 0.8);
+        padding: 20px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        margin: 50px auto;
+        width: 400px;
+        height: auto;
+        animation: fadeIn 3s ease-in;
+      }
+      .form-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+      input + input {
+        margin-bottom: 15px;
+      }
+
+      /*.container {
+        background: rgba(216, 36, 36, 0.8); /* Semi-transparent for readability
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        width: 200px;
+        width: 400px; set your desired width
+        margin: 50px auto; center horizontally + some top space
+        padding: 20px; space inside
+        text-align: center;
+      }*/
+
+      input {
+        height: 23px;
+        width: 220px;
+        border-radius: 8px;
+      }
+      label {
+        color: azure;
+        font-size: 20px;
+      }
+      button {
+        height: 25px;
+        width: 200px;
+        border-radius: 10px;
+        color: brown;
+        background-color: red;
+        font-size: 17px;
+        letter-spacing: 3px;
+      }
+      button:hover {
+        background-color: white;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav-bar">
+        <a href="">Home </a>
+        <a href="">contact</a>
+        <a href="">Info</a>
+        <a href="">Number</a>
+      </div>
+      <form action="/submit" method="POST">
+        <div class="form-wrapper">
+          <h2 style="color: white; font-size: 30px">Login Form</h2>
+          <div class="input-group">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              placeholder=" Enter your name"
+              required />
+          </div>
+          <div class="input-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required />
+          </div>
+          <div class="input-group">
+            <label for="email">User name</label>
+            <input
+              type="user-name"
+              id="user-name"
+              name="user-name"
+              placeholder="Enter your user name"
+              required />
+          </div>
+          <div class="input-group">
+            <label for="email">Age</label>
+            <input type="Age" id="Age" name="Age" placeholder="Age" required />
+          </div>
+          <div class="input-group">
+            <label for="Hashira">Ability</label>
+            <input type="Ability" id="Ability" name="Ability" required />
+          </div>
+          <div class="input-group">
+            <label for="Hashira">Hashira</label>
+            <input
+              type="Hashira"
+              id="Hashira"
+              name="Hashira"
+              placeholder="Name one Hashira"
+              required />
+          </div>
+        </div>
+        <button
+          type="submit"
+          onclick="alert('New demonslayer memeber Id 123455')">
+          Submit
+        </button>
+      </form>
+    </div>
+  </body>
+
+  <script>
+    function message() {
+      let msg = 'welcome';
+      alert('msg');
+    }
+  </script>
+</html>
